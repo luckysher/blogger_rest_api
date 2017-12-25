@@ -15,11 +15,19 @@ import blogger.rest.BloggerServiceImpl.BloggerServiceImpl;
 
 
 @RestController
-//@RequestMapping("/blog")
+@RequestMapping("/blog")
 public class BloggerRestController {
 	
 	@Autowired
 	private BloggerServiceImpl bloggerService;
 	
-   
+    private Logger logger=LoggerFactory.getLogger(BloggerRestController.class);
+    
+    @RequestMapping(value = "/{id}",method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public Blog getBlog(@PathVariable("id") Long id) {        
+        return bloggerService.getBlog(id);
+    }
+
+    
 }
