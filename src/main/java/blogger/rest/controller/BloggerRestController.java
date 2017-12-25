@@ -29,5 +29,10 @@ public class BloggerRestController {
         return bloggerService.getBlog(id);
     }
 
-    
+    @RequestMapping(value = "/add",  method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.CREATED)
+    public ObjectWithId addBlog(@RequestBody Blog blog)
+    {
+        return new ObjectWithId(bloggerService.addBlog(blog));
+    }
 }
