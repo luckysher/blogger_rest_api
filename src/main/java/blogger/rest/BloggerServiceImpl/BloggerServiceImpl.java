@@ -12,6 +12,16 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @Component
 public class BloggerServiceImpl implements BloggerService{
+
+    private static Logger logger= LoggerFactory.getLogger(BloggerServiceImpl.class);
+    private AtomicInteger atomicInteger=new AtomicInteger(0);
+
+    public BloggerServiceImpl()
+    {
+        init();
+    }
+
+   
 }
 
 
