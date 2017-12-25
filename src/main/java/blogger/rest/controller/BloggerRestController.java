@@ -14,3 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 import blogger.rest.BloggerServiceImpl.BloggerServiceImpl;
 
 
+@RestController
+//@RequestMapping("/blog")
+public class BloggerRestController {
+	
+
+}
