@@ -18,5 +18,8 @@ import blogger.rest.BloggerServiceImpl.BloggerServiceImpl;
 //@RequestMapping("/blog")
 public class BloggerRestController {
 	
-
+	@Autowired
+	private BloggerServiceImpl bloggerService;
+	
+   
 }
