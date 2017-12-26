@@ -54,7 +54,11 @@ public class BloggerServiceImpl implements BloggerService{
     	logger.debug("Getting bloger service..");
     	return this;
     }
-
+    // get blog list 
+    public List<Blog> getBlogList() {
+           List<Blog> blogList = new ArrayList<Blog>();
+           return blogList;
+    }
     
  
 
