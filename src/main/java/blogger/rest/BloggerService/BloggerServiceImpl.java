@@ -61,7 +61,13 @@ public class BloggerServiceImpl implements BloggerService{
            return blogList;
     }
     
- 
+    public Blog getBlog(int id) {
+        Blog blog = this.template.get(Blog.class, id);  
+        if (blog != null){
+        		return blog;
+         }        
+        return null;
+    }
 
   
 }
