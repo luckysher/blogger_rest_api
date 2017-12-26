@@ -48,7 +48,13 @@ public class BloggerServiceImpl implements BloggerService{
     	this.template = template;
     }
     
- 
+    // method for returning BloggerServiceImpl
+    private BloggerServiceImpl getBookService()
+    {
+    	logger.debug("Getting bloger service..");
+    	return this;
+    }
+
     
  
 
