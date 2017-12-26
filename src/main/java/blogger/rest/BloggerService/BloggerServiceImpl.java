@@ -27,7 +27,9 @@ public class BloggerServiceImpl implements BloggerService{
 	public static Date parseDate(String dateString){
 		Date date = null;
 		try{
-			
+			date = new SimpleDateFormat("yyyy/MM/dd").parse(dateString);
+			System.out.println("Date: " + date);
+			return date;
 		}catch(Exception e){			
 			logger.debug(String.format("[%s] Got exception: '%s' while formatting date: '%s'","BloggerRestApi", e, dateString));
 			e.printStackTrace();
