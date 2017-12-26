@@ -37,7 +37,11 @@ public class BloggerServiceImpl implements BloggerService{
 		return date;
 	}
 	
-
+    // consturctor for blogger service impl
+    public BloggerServiceImpl(){
+    	this.aInt = new AtomicInteger(1); 
+    	this.logger =  LoggerFactory.getLogger(BloggerServiceImpl.class);
+    }
     
  
     
