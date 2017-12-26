@@ -57,6 +57,7 @@ public class BloggerServiceImpl implements BloggerService{
     // get blog list 
     public List<Blog> getBlogList() {
            List<Blog> blogList = new ArrayList<Blog>();
+           blogList = this.template.loadAll(Blog.class);
            return blogList;
     }
     
