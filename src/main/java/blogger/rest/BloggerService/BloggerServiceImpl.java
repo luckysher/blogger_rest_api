@@ -72,6 +72,9 @@ public class BloggerServiceImpl implements BloggerService{
     public long addBlog(Blog blog)
     {
         int idToSet = aInt.getAndIncrement();
+        blog.setId(idToSet);
+        this.template.save(blog);
+        logger.debug("Adding blog with id: " + idToSet);
         return idToSet;
     }
 }
