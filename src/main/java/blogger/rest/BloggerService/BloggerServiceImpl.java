@@ -18,6 +18,21 @@ import java.util.concurrent.atomic.AtomicInteger;
 // Class for implementing Blogger service 
 public class BloggerServiceImpl implements BloggerService{
 
+    private static Logger logger= null;
+    public HibernateTemplate template;
+    public static AtomicInteger aInt;
+    
+	
+	
+	
+
+    
+ 
+    
+ 
+    
+ 
+
   
 }
 
