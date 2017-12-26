@@ -23,7 +23,17 @@ public class BloggerServiceImpl implements BloggerService{
     public static AtomicInteger aInt;
     
 	
-	
+	// get date from string
+	public static Date parseDate(String dateString){
+		Date date = null;
+		try{
+			
+		}catch(Exception e){			
+			logger.debug(String.format("[%s] Got exception: '%s' while formatting date: '%s'","BloggerRestApi", e, dateString));
+			e.printStackTrace();
+		}
+		return date;
+	}
 	
 
     
