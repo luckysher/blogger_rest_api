@@ -43,7 +43,10 @@ public class BloggerServiceImpl implements BloggerService{
     	this.logger =  LoggerFactory.getLogger(BloggerServiceImpl.class);
     }
     
- 
+    // method for setting hibernate template
+    public void setHibernateTemplate(HibernateTemplate template){
+    	this.template = template;
+    }
     
  
     
