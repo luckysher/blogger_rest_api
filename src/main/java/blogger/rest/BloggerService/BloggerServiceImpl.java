@@ -62,14 +62,18 @@ public class BloggerServiceImpl implements BloggerService{
     }
     
     public Blog getBlog(int id) {
-        Blog blog = this.template.get(Blog.class, id);  
+        Blog blog = this.template.get(Blog.class, id);
         if (blog != null){
         		return blog;
          }        
         return null;
     }
 
-  
+    public long addBlog(Blog blog)
+    {
+        int idToSet = aInt.getAndIncrement();
+        return idToSet;
+    }
 }
 
 
