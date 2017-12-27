@@ -7,5 +7,9 @@ import org.springframework.core.io.Resource;
 import blogger.rest.BloggerService.*;
 
 public class BloggerServiceHelper {
-
+	public BloggerServiceHelper(){
+		System.out.println("initializing Blogger helper");
+	}
+	
+	
 }
