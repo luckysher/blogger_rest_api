@@ -11,5 +11,9 @@ public class BloggerServiceHelper {
 		System.out.println("initializing Blogger helper");
 	}
 	
-	
+	public BloggerServiceImpl getBloggerServiceImpl(String bloggerBeanName){
+		BloggerServiceImpl dao = null;	
+		
+		return dao;
+	}
 }
