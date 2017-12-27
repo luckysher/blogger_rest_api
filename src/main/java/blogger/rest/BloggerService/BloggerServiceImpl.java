@@ -62,7 +62,14 @@ public class BloggerServiceImpl implements BloggerService{
     }
     
     public Blog getBlog(int id) {
-        Blog blog = this.template.get(Blog.class, id);
+        //Blog blog = this.template.get(Blog.class, id);
+        Blog blog = new Blog();
+        blog.setId(id);
+        blog.setTitle("testblog title");
+        blog.setHeading("test blog heading");
+    	blog.setDescription("this is test bog desciption");
+    	blog.setPublishingDate(this.parseDate("2017/10/10"));
+        System.out.print("Getting blog with id ");
         if (blog != null){
         		return blog;
          }        
