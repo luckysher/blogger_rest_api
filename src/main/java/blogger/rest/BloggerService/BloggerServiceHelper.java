@@ -5,6 +5,7 @@ import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import blogger.rest.BloggerService.*;
+import org.springframework.orm.hibernate3.HibernateTemplate;
 
 public class BloggerServiceHelper {
 	public BloggerServiceHelper(){
