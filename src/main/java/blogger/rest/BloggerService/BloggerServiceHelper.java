@@ -22,4 +22,10 @@ public class BloggerServiceHelper {
 		dao = (BloggerServiceImpl) this.beanfactory.getBean("d");
 		return dao;
 	}
+
+	public HibernateTemplate getTemplate(){
+		HibernateTemplate hibernateTemplate = null;		
+		hibernateTemplate = (HibernateTemplate) beanfactory.getBean("template");
+		return hibernateTemplate;
+	}
 }
