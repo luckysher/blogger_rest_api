@@ -20,18 +20,22 @@ import blogger.rest.models.*;
 @RestController
 @RequestMapping("/blog")
 public class BloggerRestController {
-	
-	@Autowired
+
 	private BloggerServiceImpl bloggerService;
 	
-    private Logger logger=LoggerFactory.getLogger(BloggerRestController.class);
+    private Logger logger ;
+    
+    public BloggerRestController(){
+    	this.logger = LoggerFactory.getLogger(BloggerRestController.class);
+    	this.bloggerService = new BloggerServiceImpl();
+    	this.bloggerService.setHibernateTemplate(new BloggerServiceHelper().getTemplate());
+    }
     
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
-    public Blog getBlog(@PathVariable("id") Long id) {        
+    public Blog getBlog(@PathVariable("id") int id) {    	
         return bloggerService.getBlog(id);
     }
-
     @RequestMapping(value = "/add",  method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     public ObjectWithId addBlog(@RequestBody Blog blog)
