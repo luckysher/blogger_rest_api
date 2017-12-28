@@ -48,7 +48,12 @@ public class Blog {
 	public String getHeading(){
 		return heading;
 	}
-	
+	public void setDescription(String description){
+		this.description = description;
+	}
+	public String getDescription(){
+		return description;
+	}
 
 	
 }
