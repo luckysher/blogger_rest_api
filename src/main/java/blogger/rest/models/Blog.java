@@ -55,5 +55,10 @@ public class Blog {
 		return description;
 	}
 
-	
+	public void setPublishingdate(Date publishingdate){
+		this.publishingdate = publishingdate;
+	}
+	public Date getPublishingdate(){
+		return this.publishingdate;
+	}
 }
