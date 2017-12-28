@@ -19,10 +19,7 @@ public class BloggerServiceHelper {
 	
 	public BloggerServiceImpl getBloggerServiceImpl(String bloggerBeanName){
 		BloggerServiceImpl dao = null;	
-		String contextFilePath = "/applicationContext.xml";		
-		Resource r = new ClassPathResource(contextFilePath);
-		BeanFactory beanfactory = new XmlBeanFactory(r);
-		dao = (BloggerServiceImpl) beanfactory.getBean("d");
+		dao = (BloggerServiceImpl) this.beanfactory.getBean("d");
 		return dao;
 	}
 }
