@@ -17,10 +17,12 @@ import blogger.rest.BloggerService.BloggerServiceHelper;
 import blogger.rest.BloggerService.BloggerServiceImpl;
 import blogger.rest.models.*;
 
+
 @RestController
 @RequestMapping("/blog")
 public class BloggerRestController {
-
+	
+	//@Autowired
 	private BloggerServiceImpl bloggerService;
 	
     private Logger logger ;
@@ -36,10 +38,11 @@ public class BloggerRestController {
     public Blog getBlog(@PathVariable("id") int id) {    	
         return bloggerService.getBlog(id);
     }
-    @RequestMapping(value = "/add",  method = RequestMethod.POST)
-    @ResponseStatus(HttpStatus.CREATED)
-    public ObjectWithId addBlog(@RequestBody Blog blog)
-    {
-        return new ObjectWithId(bloggerService.addBlog(blog));
-    }
+
+    //@RequestMapping(value = "/add",  method = RequestMethod.POST)
+    //@ResponseStatus(HttpStatus.CREATED)
+    //public ObjectWithId addBlog(@RequestBody Book book)
+   // {
+    //    return new ObjectWithId(bookService.addBook(book));
+    //}
 }
