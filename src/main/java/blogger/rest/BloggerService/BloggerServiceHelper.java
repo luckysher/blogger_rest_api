@@ -12,7 +12,8 @@ public class BloggerServiceHelper {
 	 
 	public BloggerServiceHelper(){
 		System.out.println("initializing Blogger helper");
-	
+		String contextFilePath = "/applicationContext1.xml";		
+		Resource r = new ClassPathResource(contextFilePath);
 		this.beanfactory = new XmlBeanFactory(r);		
 	}
 	
