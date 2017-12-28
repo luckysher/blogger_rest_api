@@ -8,8 +8,12 @@ import blogger.rest.BloggerService.*;
 import org.springframework.orm.hibernate3.HibernateTemplate;
 
 public class BloggerServiceHelper {
+	public BeanFactory beanfactory ;
+	 
 	public BloggerServiceHelper(){
 		System.out.println("initializing Blogger helper");
+	
+		this.beanfactory = new XmlBeanFactory(r);		
 	}
 	
 	public BloggerServiceImpl getBloggerServiceImpl(String bloggerBeanName){
