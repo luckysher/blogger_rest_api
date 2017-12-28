@@ -26,6 +26,12 @@ public class Blog {
 	Date publishingdate;
 	
 
+	public void setId(int id){
+		this.id = id;
+	}
+	public int getId(){
+		return this.id;
+	}
 	
 	
 	
