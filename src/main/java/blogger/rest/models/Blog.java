@@ -17,7 +17,19 @@ public class Blog {
 	
 	@NotBlank @NotNull
 	String heading;
-		
+	
+	
+	@NotBlank @NotNull
+	String description;
+	
+	@NotBlank @NotNull @DateFormat
+	Date publishingdate;
+	
+
+	
+	
+	
+	
 	
 
 	
