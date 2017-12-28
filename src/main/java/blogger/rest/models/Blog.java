@@ -15,4 +15,10 @@ public class Blog {
 	@NotBlank @NotNull
 	String title;
 	
+	@NotBlank @NotNull
+	String heading;
+		
+	
+
+	
 }
