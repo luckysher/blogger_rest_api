@@ -1,6 +1,8 @@
 package blogger.rest.controller;
 
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,7 @@ import blogger.rest.BloggerService.BloggerServiceHelper;
 import blogger.rest.BloggerService.BloggerServiceImpl;
 import blogger.rest.models.*;
 
+import org.json.simple.*;
 
 @RestController
 @RequestMapping("/blog")
@@ -39,10 +42,10 @@ public class BloggerRestController {
         return bloggerService.getBlog(id);
     }
 
-    //@RequestMapping(value = "/add",  method = RequestMethod.POST)
-    //@ResponseStatus(HttpStatus.CREATED)
-    //public ObjectWithId addBlog(@RequestBody Book book)
-   // {
-    //    return new ObjectWithId(bookService.addBook(book));
-    //}
+    @RequestMapping(value = "/add",  method = RequestMethod.POST)
+    public Blog addBlog(@RequestBody Blog blog)
+    {
+    	this.bloggerService.addBlog(blog);
+    	return blog;        
+   }
 }
