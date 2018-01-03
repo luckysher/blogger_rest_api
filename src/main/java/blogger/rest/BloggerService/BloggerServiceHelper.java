@@ -56,6 +56,12 @@ public class BloggerServiceHelper {
 // get string from date 
 	public static String parseDateToString(Date date){
 		String dateString=null;		
+			try{
+				dateString = new SimpleDateFormat("yyyy/MM/dd").format(date);
+				logger.debug("dateString : " + dateString);
+				return dateString;
+			}
+			return dateString;
 		}
 	
 }
