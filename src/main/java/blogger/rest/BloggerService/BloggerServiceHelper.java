@@ -40,4 +40,10 @@ public class BloggerServiceHelper {
 		hibernateTemplate = (HibernateTemplate) beanfactory.getBean("template");
 		return hibernateTemplate;
 	}
+	// get date from string
+	public static Date parseDate(String dateString){
+		Date date = null;
+		
+		return date;
+	}
 }
