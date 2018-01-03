@@ -21,22 +21,7 @@ public class BloggerServiceImpl implements BloggerService{
     private static Logger logger= null;
     public HibernateTemplate template;
     public static AtomicInteger aInt;
-    
-	
-	// get date from string
-	public static Date parseDate(String dateString){
-		Date date = null;
-		try{
-			date = new SimpleDateFormat("yyyy/MM/dd").parse(dateString);
-			System.out.println("Date: " + date);
-			return date;
-		}catch(Exception e){			
-			logger.debug(String.format("[%s] Got exception: '%s' while formatting date: '%s'","BloggerRestApi", e, dateString));
-			e.printStackTrace();
-		}
-		return date;
-	}
-	
+    	
     // consturctor for blogger service impl
     public BloggerServiceImpl(){
     	this.aInt = new AtomicInteger(1); 
@@ -44,7 +29,7 @@ public class BloggerServiceImpl implements BloggerService{
     }
     
     // method for setting hibernate template
-    public void setHibernateTemplate(HibernateTemplate template){
+    public void setTemplate(HibernateTemplate template){
     	this.template = template;
     }
     
