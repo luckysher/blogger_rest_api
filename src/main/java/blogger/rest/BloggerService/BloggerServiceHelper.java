@@ -60,6 +60,9 @@ public class BloggerServiceHelper {
 				dateString = new SimpleDateFormat("yyyy/MM/dd").format(date);
 				logger.debug("dateString : " + dateString);
 				return dateString;
+			}catch(Exception e){			
+				logger.debug(String.format("[%s] Got exception: '%s' while formatting date: '%s' to string","BloggerRestApi", e, dateString));
+				e.printStackTrace();
 			}
 			return dateString;
 		}
