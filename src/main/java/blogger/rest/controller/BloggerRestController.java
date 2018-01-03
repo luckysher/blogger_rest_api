@@ -48,4 +48,10 @@ public class BloggerRestController {
     	this.bloggerService.addBlog(blog);
     	return blog;        
    }
+    @RequestMapping(value = "/all",  method = RequestMethod.GET)
+    public List<Blog> getBlogList()
+    {
+    	List<Blog> blogs =  this.bloggerService.getBlogList();
+    	return blogs;        
+   }
 }
