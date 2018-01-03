@@ -53,4 +53,9 @@ public class BloggerServiceHelper {
 		}
 		return date;
 	}
+// get string from date 
+	public static String parseDateToString(Date date){
+		String dateString=null;		
+		}
+	
 }
