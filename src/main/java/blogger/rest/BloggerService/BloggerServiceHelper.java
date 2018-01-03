@@ -48,7 +48,8 @@ public class BloggerServiceHelper {
 			System.out.println("Date: " + date);
 			return date;
 		}catch(Exception e){			
-			
+			logger.debug(String.format("[%s] Got exception: '%s' while formatting date: '%s'","BloggerRestApi", e, dateString));
+			e.printStackTrace();
 		}
 		return date;
 	}
