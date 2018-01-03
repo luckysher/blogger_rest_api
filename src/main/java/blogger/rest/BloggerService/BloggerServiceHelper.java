@@ -43,7 +43,13 @@ public class BloggerServiceHelper {
 	// get date from string
 	public static Date parseDate(String dateString){
 		Date date = null;
-		
+		try{
+			date = new SimpleDateFormat("yyyy/MM/dd").parse(dateString);
+			System.out.println("Date: " + date);
+			return date;
+		}catch(Exception e){			
+			
+		}
 		return date;
 	}
 }
