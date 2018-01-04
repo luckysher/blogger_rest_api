@@ -11,6 +11,13 @@ public class DateFormatValidator implements ConstraintValidator<DateFormat, Stri
 		// TODO Auto-generated method stub		
 	}
 
-	
+	@Override
+	public boolean isValid(String date, ConstraintValidatorContext arg1) {
+		if (date == null){
+			return false;
+		}
+		System.out.print("Vadating date format...");
+		return false;
+	}
 
 }
