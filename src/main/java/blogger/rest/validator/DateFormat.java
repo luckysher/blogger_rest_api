@@ -9,6 +9,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import java.lang.annotation.Retention;
 
+
+
+@Documented
+@Constraint(validatedBy=DateFormatValidator.class)
+@Target(value = { ElementType.METHOD, ElementType.FIELD })
+@Retention(value = RetentionPolicy.RUNTIME)
+
 public @interface DateFormat {
 	String messsage() default "{DateFormat}";
 	Class <?>[] groups() default {};
