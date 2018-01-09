@@ -91,7 +91,14 @@ public class HttpRequest {
 		 StringBuffer response = null;		 
 		 System.out.println("Doing post request: ");
 		 this.con.setDoOutput(true);
-			 
+		 OutputStreamWriter osw = new OutputStreamWriter(con.getOutputStream());
+		 osw.write(blog);
+		 osw.flush();
+		 osw.close();
+		 response = new StringBuffer();	
+		 response.append("added blog successfully : " + this.con.getResponseCode());
+		 BufferedReader br = new BufferedReader(new InputStreamReader(this.con.getInputStream()));
+		response = new StringBuffer();		 
 		String readline=null;
 		 if (this.con.getResponseCode() == HttpURLConnection.HTTP_OK){
 			 while((readline = br.readLine()) != null){
