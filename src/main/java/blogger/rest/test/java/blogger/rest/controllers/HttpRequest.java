@@ -40,4 +40,17 @@ public class HttpRequest {
 		 this.accept = acceptType;
 	 }
 	 
+	 public boolean connect(){		 
+		 boolean connected = false;
+		 try{
+			 this.con = (HttpURLConnection)this.url.openConnection();
+				     
+		     connected = true;
+		 }catch(Exception e){			 
+			 System.out.println("Got exception while connecting to server");
+			 System.out.println("Exception : " + e);
+		 }
+		 return connected;
+	}
 	
+}
