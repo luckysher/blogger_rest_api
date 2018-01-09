@@ -20,3 +20,16 @@ import java.util.Arrays;
 import java.util.List;
 import org.json.simple.*;
 
+public class HttpRequest {
+        
+	 public URL url;
+	 public HttpURLConnection con;	 
+	 public String accept="application/json";
+	 public String userAgent = "Mozila/5.0";
+	 public String contentType="application/json";
+	 
+	 public void setUrl(String url) throws MalformedURLException{
+		   this.url = new URL(url);		 
+	     }
+	
+}
