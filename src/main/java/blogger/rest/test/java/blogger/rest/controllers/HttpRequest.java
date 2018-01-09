@@ -53,5 +53,16 @@ public class HttpRequest {
 		 }
 		 return connected;
 	}
+	 
+	 public void setRequestMethod(String method){
+		 boolean connected = this.connect();
+		 if (connected){
+		 List<String> methods = Arrays.asList("GET", "POST");
+		
+		 }else{
+			 	System.out.println("Unable to set the requested method : '" + method + "'");
+		 	}
+		  }
+		 }
 	
 }
