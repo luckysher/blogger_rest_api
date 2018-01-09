@@ -73,5 +73,18 @@ public class HttpRequest {
 		 	}
 		  }
 		 }
+	 
+	 public String doGetRequest() throws IOException{		
+		 StringBuffer response = null;		 
+		 BufferedReader br = new BufferedReader(new InputStreamReader(this.con.getInputStream()));
+		
+		 if (this.con.getResponseCode() == HttpURLConnection.HTTP_OK){
+			 while((readline = br.readLine()) != null){
+				 response.append(readline);			 
+		 	}    
+		 }
+		 return response.toString();
+	 }
+	 
 	
 }
