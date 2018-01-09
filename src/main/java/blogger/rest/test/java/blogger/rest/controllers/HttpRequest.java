@@ -77,7 +77,8 @@ public class HttpRequest {
 	 public String doGetRequest() throws IOException{		
 		 StringBuffer response = null;		 
 		 BufferedReader br = new BufferedReader(new InputStreamReader(this.con.getInputStream()));
-		
+		 response = new StringBuffer();		 
+		 String readline=null;
 		 if (this.con.getResponseCode() == HttpURLConnection.HTTP_OK){
 			 while((readline = br.readLine()) != null){
 				 response.append(readline);			 
