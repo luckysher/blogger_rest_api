@@ -44,7 +44,8 @@ public class HttpRequest {
 		 boolean connected = false;
 		 try{
 			 this.con = (HttpURLConnection)this.url.openConnection();
-				     
+			 this.con.addRequestProperty("Accept", this.accept);
+		     this.con.addRequestProperty("User-Agent", this.userAgent);		     
 		     connected = true;
 		 }catch(Exception e){			 
 			 System.out.println("Got exception while connecting to server");
