@@ -58,7 +58,16 @@ public class HttpRequest {
 		 boolean connected = this.connect();
 		 if (connected){
 		 List<String> methods = Arrays.asList("GET", "POST");
-		
+		 if(methods.contains(method)){
+			    if (method.equals("POST")){ 
+			    	//this.setContentType("application/json");
+			    	System.out.println("Set content type: a/json ");
+			    	this.con.addRequestProperty("Method", method);
+			    	this.con.addRequestProperty("Accept", "application/json");
+			    	this.con.addRequestProperty("Content-Type", "application/json");
+			    }else{
+			    	this.con.addRequestProperty("Method", method);
+			    }
 		 }else{
 			 	System.out.println("Unable to set the requested method : '" + method + "'");
 		 	}
