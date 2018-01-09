@@ -36,5 +36,8 @@ public class HttpRequest {
 		 this.contentType = contentType;
 	 }
 	
+	 public void setAcceptType(String acceptType){
+		 this.accept = acceptType;
+	 }
+	 
 	
-}
