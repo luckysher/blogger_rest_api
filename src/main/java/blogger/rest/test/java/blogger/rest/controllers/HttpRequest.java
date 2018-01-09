@@ -87,5 +87,17 @@ public class HttpRequest {
 		 return response.toString();
 	 }
 	 
-	
+	 public String doPostRequest(String blog) throws IOException{		 
+		 StringBuffer response = null;		 
+		 System.out.println("Doing post request: ");
+		 this.con.setDoOutput(true);
+			 
+		String readline=null;
+		 if (this.con.getResponseCode() == HttpURLConnection.HTTP_OK){
+			 while((readline = br.readLine()) != null){
+				 response.append(readline);			 
+		 	}    
+		 }
+		 return response.toString();
+	 }
 }
