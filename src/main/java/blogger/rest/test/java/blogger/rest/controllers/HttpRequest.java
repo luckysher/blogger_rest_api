@@ -31,5 +31,10 @@ public class HttpRequest {
 	 public void setUrl(String url) throws MalformedURLException{
 		   this.url = new URL(url);		 
 	     }
+	 
+	 public void setContentType(String contentType){
+		 this.contentType = contentType;
+	 }
+	
 	
 }
